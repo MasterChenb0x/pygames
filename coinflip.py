@@ -17,3 +17,7 @@ for i in range(0,len(flip)):
 	elif flip[i] == 1:
 		print("Tails")
 
+heads = flip.count(0)
+tails = flip.count(1)
+
+print("There are " + str(heads) + " Heads, and " + str(tails) + " Tails in the dataset.")
