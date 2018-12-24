@@ -15,9 +15,6 @@ for i in range(0,len(flip)):
 	if flip[i] == 0:
 		print("Heads")
 	elif flip[i] == 1:
-		print("Tails")
+		print("Tails"))
 
-heads = flip.count(0)
-tails = flip.count(1)
-
-print("There are " + str(heads) + " Heads, and " + str(tails) + " Tails in the dataset.")
+print("There are " + str(flip.count(0)) + " Heads, and " + str(flip.count(1)) + " Tails in the dataset.")
