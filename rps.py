@@ -14,6 +14,12 @@ def selectionConvert(selection):
 		return 1
 	elif selection == "s":
 		return 2
+def nameConvert(num):
+	'''
+	Converts integers back to names after Maths.
+	'''
+	hands = ["Rock", "Paper", "Scissors"]
+	return hands[num]
 
 def compare(playerHand, computerHand):
 	'''
@@ -30,17 +36,22 @@ def compare(playerHand, computerHand):
 def main():
 	#Set defaults
 	play = "y"
-
+	print("Let's play Rock, Paper Scissors!")
+	print("		Rock smashes Scissors")
+	print("		Scissors cuts Paper.")
+	print("		Paper covers Rock.")
 	while play == "y":
 		userSelect = input("Make your selection: (r)ock, (p)aper, or (s)cissors: ")
 		userSelect = userSelect.lower()
-		print(userSelect)
 		userSelect = selectionConvert(userSelect)
-		print(userSelect)
 		compSelect = random.randint(0,2)
-		print(compSelect)
 		outcome = compare(userSelect, compSelect)
+		userSelect = nameConvert(userSelect)
+		compSelect = nameConvert(compSelect)
+		print("You selected " + userSelect)
+		print("The computer selected " + compSelect)
 		print(outcome)
 		play = input("Would you like to play again? (y/N): ")
 
-main()
+if __name__ == "__main__":
+	main()
